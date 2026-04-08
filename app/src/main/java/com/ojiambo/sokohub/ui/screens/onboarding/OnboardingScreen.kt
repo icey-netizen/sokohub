@@ -3,6 +3,7 @@ package com.jonathan.sokohub.ui.screens.onboarding
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.snapping.SnapPosition
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -36,6 +37,7 @@ fun OnboardingScreen(navController: NavController){
     Column(
         modifier = Modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.Center
 
         ) {
 
@@ -74,11 +76,11 @@ fun OnboardingScreen(navController: NavController){
             fontFamily = FontFamily.Serif
 
         )
-        Spacer(modifier = Modifier.height(15.dp))
+        Spacer(modifier = Modifier.height(45.dp))
 
 
         Button(
-            onClick = {},
+            onClick = {navController.navigate(com.ojiambo.sokohub.navigation.ROUT_HOME)},
             colors = ButtonDefaults.buttonColors(LightTeal),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)
