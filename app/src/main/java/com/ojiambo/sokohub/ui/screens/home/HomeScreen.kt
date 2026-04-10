@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ojiambo.sokohub.R
+import com.ojiambo.sokohub.navigation.ROUT_INTENT
 import com.ojiambo.sokohub.ui.theme.LightTeal
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -122,14 +123,14 @@ fun HomeScreen(navController: NavController){
                     modifier = Modifier.padding(start = 45.dp)
                 )
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate(ROUT_INTENT)},
                     colors = ButtonDefaults.buttonColors(LightTeal
                     ),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.padding(start = 15.dp)
 
                 ) {
-                    Text(text = "Shop Now!!")
+                    Text(text = "Intent")
                 }
             }
             Spacer(modifier = Modifier.width(10.dp))
@@ -208,6 +209,7 @@ fun HomeScreen(navController: NavController){
         }
 
         //End of Row
+
     }
 
 

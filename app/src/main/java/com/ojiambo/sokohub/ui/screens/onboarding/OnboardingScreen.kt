@@ -80,7 +80,7 @@ fun OnboardingScreen(navController: NavController){
 
 
         Button(
-            onClick = {navController.navigate(com.ojiambo.sokohub.navigation.ROUT_HOME)},
+            onClick = {navController.navigate(com.ojiambo.sokohub.navigation.ROUT_REGISTER)},
             colors = ButtonDefaults.buttonColors(LightTeal),
             shape = RoundedCornerShape(10.dp),
             modifier = Modifier.width(350.dp)

@@ -11,6 +11,7 @@ import com.ojiambo.sokohub.ui.screens.about.AboutScreen
 import com.ojiambo.sokohub.ui.screens.auth.LoginScreen
 import com.ojiambo.sokohub.ui.screens.auth.RegisterScreen
 import com.ojiambo.sokohub.ui.screens.home.HomeScreen
+import com.ojiambo.sokohub.ui.screens.intent.IntentScreen
 import com.ojiambo.sokohub.ui.screens.service.ServiceScreen
 
 @Composable
@@ -43,6 +44,10 @@ fun AppNavHost(
         composable(ROUT_SERVICE) {
             ServiceScreen(navController)
         }
+        composable(ROUT_INTENT) {
+            IntentScreen(navController)
+        }
+
 
 
 
