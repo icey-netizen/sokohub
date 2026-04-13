@@ -1,5 +1,6 @@
 package com.ojiambo.sokohub.navigation
 
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
@@ -12,13 +13,15 @@ import com.ojiambo.sokohub.ui.screens.auth.LoginScreen
 import com.ojiambo.sokohub.ui.screens.auth.RegisterScreen
 import com.ojiambo.sokohub.ui.screens.home.HomeScreen
 import com.ojiambo.sokohub.ui.screens.intent.IntentScreen
+import com.ojiambo.sokohub.ui.screens.scaffold.ScaffoldScreen
 import com.ojiambo.sokohub.ui.screens.service.ServiceScreen
+import com.ojiambo.sokohub.ui.screens.splash.SplashScreen
 
 @Composable
 fun AppNavHost(
     modifier: Modifier = Modifier,
     navController: NavHostController = rememberNavController(),
-    startDestination: String = ROUT_ONBOARDING
+    startDestination: String = ROUT_SPLASH
 ) {
 
     NavHost(
@@ -47,6 +50,14 @@ fun AppNavHost(
         composable(ROUT_INTENT) {
             IntentScreen(navController)
         }
+        composable(ROUT_SPLASH) {
+            SplashScreen(navController)
+        }
+        composable(ROUT_SCAFFOLD) {
+            ScaffoldScreen(navController)
+        }
+
+
 
 
 
