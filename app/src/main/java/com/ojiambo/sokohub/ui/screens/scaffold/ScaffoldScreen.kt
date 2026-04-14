@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.AccountBox
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
@@ -35,6 +36,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.ojiambo.sokohub.navigation.ROUT_HOME
+import com.ojiambo.sokohub.navigation.ROUT_INTENT
+import com.ojiambo.sokohub.navigation.ROUT_LOGIN
 
 @Composable
 fun ScaffoldScreen(navController: NavController){
@@ -74,30 +78,30 @@ fun ScaffoldScreen(navController: NavController){
                     NavigationBarItem(
                         icon = { Icon(Icons.Default.Home, contentDescription = "Home") },
                         label = { Text("Home") },
-                        selected = selectedIndex == 0,
-                        onClick = { selectedIndex = 0
-                            //navController.navigate(ROUT_HOME)
+                        selected = selectedIndex == 1,
+                        onClick = { selectedIndex = 1
+                            navController.navigate(ROUT_HOME)
                         }
                     )
                     NavigationBarItem(
                         icon = { Icon(Icons.Default.Favorite, contentDescription = "Favorites") },
-                        label = { Text("Favorites") },
+                        label = { Text("Intent") },
                         selected = selectedIndex == 1,
                         onClick = { selectedIndex = 1
-                            // navController.navigate(ROUT_HOME)
+                             navController.navigate(ROUT_INTENT)
                         }
                     )
                     NavigationBarItem(
                         icon = { Icon(Icons.Default.Person, contentDescription = "Profile") },
-                        label = { Text("Profile") },
+                        label = { Text("LOGIN") },
                         selected = selectedIndex == 2,
                         onClick = { selectedIndex = 2
-                            //  navController.navigate(ROUT_HOME)
+                            navController.navigate(ROUT_LOGIN)
                         }
                     )
 
                     NavigationBarItem(
-                        icon = { Icon(Icons.Default.Person, contentDescription = "Profile") },
+                        icon = { Icon(Icons.Default.AccountBox, contentDescription = "Profile") },
                         label = { Text("Profile") },
                         selected = selectedIndex == 2,
                         onClick = { selectedIndex = 2
