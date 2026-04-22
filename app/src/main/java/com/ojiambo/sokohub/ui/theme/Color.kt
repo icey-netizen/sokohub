@@ -22,7 +22,7 @@ val Purple = Color(0xFF9C27B0)
 
 val Yellow = Color(0xFFFFEB3B)
 
-val Teal = Color(0xFF009688)
+val newOrange = Color(0xFF009688)
 
 val Brown = Color(0xFF795548)
 
@@ -39,4 +39,5 @@ val LightYellow = Color(0xFFFFF59D)
 val LightTeal = Color(0xFF4DB6AC)
 
 val LightBrown = Color(0xFFA1887F)
+val newWhite = Color(0xFFFFFFFF)
 
