@@ -47,6 +47,7 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.ojiambo.sokohub.R
+import com.ojiambo.sokohub.navigation.ROUTE_VIEW_PRODUCTS
 import com.ojiambo.sokohub.navigation.ROUT_ABOUT
 import com.ojiambo.sokohub.navigation.ROUT_INTENT
 import com.ojiambo.sokohub.ui.theme.LightTeal
@@ -148,14 +149,14 @@ fun HomeScreen(navController: NavController){
                     modifier = Modifier.padding(start = 45.dp)
                 )
                 Button(
-                    onClick = {navController.navigate(ROUT_ABOUT)},
+                    onClick = {navController.navigate(ROUTE_VIEW_PRODUCTS)},
                     colors = ButtonDefaults.buttonColors(LightTeal
                     ),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.padding(start = 15.dp)
 
                 ) {
-                    Text(text = "About")
+                    Text(text = "Shop Now!!")
                 }
             }
             Spacer(modifier = Modifier.width(10.dp))
@@ -172,17 +173,18 @@ fun HomeScreen(navController: NavController){
                     modifier = Modifier.padding(start = 45.dp)
                 )
                 Button(
-                    onClick = {},
+                    onClick = {navController.navigate(ROUT_ABOUT)},
                     colors = ButtonDefaults.buttonColors(LightTeal
                     ),
                     shape = RoundedCornerShape(10.dp),
                     modifier = Modifier.padding(start = 15.dp)
 
                 ) {
-                    Text(text = "Shop Now!!")
+                    Text(text = "About")
                 }
             }
             Spacer(modifier = Modifier.width(10.dp))
+
             Column() {
                 Image(
                     painter = painterResource(R.drawable.grocery),

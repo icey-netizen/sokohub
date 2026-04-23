@@ -20,13 +20,16 @@ import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 import com.ojiambo.sokohub.data.ProductViewModel
 import com.ojiambo.sokohub.models.Product
 import com.ojiambo.sokohub.navigation.ROUT_HOME
+import com.ojiambo.sokohub.ui.screens.auth.RegisterScreen
 import com.ojiambo.sokohub.ui.theme.newOrange
 import com.ojiambo.sokohub.ui.theme.newWhite
 @OptIn(ExperimentalMaterial3Api::class)

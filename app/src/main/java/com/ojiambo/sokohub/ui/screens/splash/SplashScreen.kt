@@ -26,6 +26,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 
+//Goes together with the delay..
 @SuppressLint("CoroutineCreationDuringComposition")
 @Composable
 fun SplashScreen(navController: NavController){
